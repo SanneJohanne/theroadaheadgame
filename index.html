@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HomePage</title>
+
+    <!-- Font import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Voltaire&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        /* General page */
+
+        body {
+            margin: 0;
+            background-color: #1A1A1A;
+        }
+
+
+        /* Navigation */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            padding: 15px 20px;
+            background-color: #7f7f7f;
+            display: flex;
+            align-items: center;
+        }
+
+            nav a {
+                font-family: 'Voltaire', sans-serif;
+                font-weight: bold;
+                color: #1A1A1A;
+                text-decoration: none;
+            }
+
+        @media (max-width: 600px) {
+            nav {
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        }
+
+        .home-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ffff;
+            text-decoration: none;
+        }
+
+
+            .home-link span {
+                font-family: 'Voltaire', sans-serif;
+                font-size: 1.5rem;
+            }
+
+        .nav-center {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 100px;
+        }
+
+            .nav-center a {
+                font-family: 'Voltaire', sans-serif;
+                font-weight: bold;
+                font-size: clamp(1rem, 1.5vw, 1.2rem);
+                color: #1A1A1A;
+                text-decoration: none;
+            }
+
+                .nav-center a:hover {
+                    text-decoration: underline;
+                }
+
+        /* Hero title */
+
+        h1 {
+            font-family: 'Voltaire', sans-serif;
+            margin: 0;
+            font-size: clamp(4rem, 10vw, 9rem);
+            line-height: 1.05;
+            color: #ffff;
+            text-align: left;
+        }
+
+
+        /* Hero section */
+
+        .hero {
+            min-height: 500px;
+            padding-left: clamp(40px, 8vw, 150px);
+            padding-right: clamp(20px, 5vw, 100px);
+            background-image: url("images/Extended.png");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: left;
+        }
+
+
+            /* Hero description */
+
+            .hero p {
+                max-width: 600px;
+                margin-top: 20px;
+                font-family: 'Voltaire', sans-serif;
+                font-size: clamp(1rem, 2vw, 1.3rem);
+                line-height: 1.5;
+                color: #ffff;
+
+            }
+
+
+
+        /* Phone */
+
+        @media (max-width: 600px) {
+            .hero {
+                min-height: 350px;
+            }
+
+            .social-item {
+                gap: 10px;
+            }
+        }
+
+        .about-section {
+            padding-left: clamp(40px, 8vw, 150px);
+            padding-right: clamp(20px, 5vw, 100px);
+        }
+
+            .about-section h2 {
+                font-family: 'Voltaire', sans-serif;
+                font-size: clamp(2rem, 5vw, 3rem);
+                color: #ffff;
+                margin-top: -50px;
+            }
+
+            .about-section p {
+                max-width: 800px;
+                font-family: 'Voltaire', sans-serif;
+                font-size: clamp(1rem, 2vw, 1.3rem);
+                line-height: 1.5;
+                color: #ffff;
+            }
+
+        .contact-box{
+            font-family: 'Voltaire', sans-serif;
+            color: #ffff;
+        }
+        /* Footer */
+        footer {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            font-family: 'Voltaire', sans-serif;
+            color: #ffff;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+        <a href="index.html" class="home-link">
+            <img src="images/Logo.png" alt="Home">
+            <span>The Road Ahead</span>
+        </a>
+        <div class="nav-center">
+            <a href="">Link</a>
+            <a href="">Link</a>
+            <a href="">Link</a>
+        </div>
+    </nav>
+
+
+    <main>
+
+
+        <!-- Hero -->
+
+        <header class="hero">
+
+            <h1>
+                The Road Ahead
+            </h1>
+
+            <p>
+                A narrative-driven puzzle adventure that lets you step into the
+                life of a grieving widow as she learns to find her way back into
+                the world, one challenge at a time.
+            </p>
+
+        </header>
+
+
+        <section class="about-section">
+
+            <h2>Concept </h2>
+            <p>
+                The Road Ahead is a narrative-driven puzzle adventure about grief,
+                independence, and finding the courage to live again. On a farm in
+                1950’s rural America, you play as a widow who has isolated herself
+                from the world after her husband’s death. She gradually rediscovers
+                her confidence and independence by repairing her husband's old
+                Model T and leaving their farm, eventually finding the courage to
+                step back into the world on her own.
+            </p>
+
+        </section>
+
+
+        <!-- Contact box -->
+
+        <section class="contact-box">
+
+
+            <div class="social-item">
+
+                <img src="images/Email.png" alt="Email">
+
+                <a href="mailto:theroadaheadgame@gmail.com">
+                    TheRoadAheadGame@gmail.com
+                </a>
+
+            </div>
+
+
+            <div class="social-item">
+
+                <img src="images/instagram.png" alt="Instagram">
+
+                <a href="https://www.instagram.com/theroadahead_game/">
+                    TheRoadAhead_Game
+                </a>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+        <p>&copy; 2026 Sanne Johanne Hermansen</p>
+    </footer>
+
+</body>
+
+</html>
