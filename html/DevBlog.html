@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DevBlog</title>
+
+    <!-- Font import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Stint+Ultra+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        /* General page */
+
+        body {
+            margin: 0;
+            background-color: #1A1A1A;
+        }
+
+
+        /* Navigation */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            padding: 15px 20px;
+            background-color: #1A1A1A;
+            display: flex;
+            align-items: center;
+        }
+
+            nav a {
+                font-family: "Stint Ultra Condensed", serif;
+                font-weight: bold;
+                color: #ffff;
+                text-decoration: none;
+            }
+
+        @media (max-width: 600px) {
+            nav {
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        }
+
+        .home-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ffff;
+            text-decoration: none;
+        }
+
+
+            .home-link span {
+                font-family: "Stint Ultra Condensed", serif;
+                font-size: 1.5rem;
+            }
+
+        .nav-center {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 100px;
+        }
+
+            .nav-center a {
+                font-family: "Stint Ultra Condensed", serif;
+                font-weight: bold;
+                font-size: clamp(1.2rem, 1.7vw, 1.4rem);
+                color: #ffff;
+                text-decoration: none;
+            }
+
+        .nav img {
+            height: 10%;
+            width: 10%;
+        }
+
+        .nav-center a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero title */
+
+        /* h1 {
+            font-family: "Stint Ultra Condensed", serif;
+            margin: 0;
+            font-size: clamp(4rem, 10vw, 9rem);
+            line-height: 1.05;
+            color: #ffff;
+            text-align: left;
+        }
+
+
+        /* Hero section */
+
+        .hero {
+            /*  padding-left: clamp(40px, 8vw, 150px);
+            padding-right: clamp(20px, 5vw, 100px);*/
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: left;
+            overflow: hidden;
+        }
+
+            .hero img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            /* Hero description */
+
+            .hero p {
+                max-width: 600px;
+                margin-top: 20px;
+                font-family: "Stint Ultra Condensed", serif;
+                font-size: clamp(1rem, 2vw, 1.3rem);
+                line-height: 1.5;
+                color: #1A1A1A;
+            }
+
+
+
+        /* Phone */
+
+        @media (max-width: 600px) {
+            .hero {
+                min-height: 350px;
+            }
+
+            .social-item {
+                gap: 10px;
+            }
+        }
+
+        .concept {
+            padding-left: clamp(40px, 8vw, 150px);
+            padding-right: clamp(20px, 5vw, 100px);
+        }
+
+            .concept h2 {
+                font-family: "Stint Ultra Condensed", serif;
+                font-size: clamp(2rem, 5vw, 3rem);
+                color: #EAE2D7;
+                margin-top: -50px;
+            }
+
+            .concept p {
+                max-width: 700px;
+                font-family: "Roboto", sans-serif;
+                font-size: clamp(1rem, 2vw, 1.3rem);
+                line-height: 1.5;
+                color: #ffff;
+            }
+
+        .contact-box {
+            font-family: "Stint Ultra Condensed", serif;
+            color: #ffff;
+        }
+        /* Footer */
+        footer {
+            padding: 20px;
+            text-align: center;
+        }
+
+            footer p {
+                font-family: "Stint Ultra Condensed", serif;
+                color: #ffff;
+            }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+        <a href="../index.html" class="home-link">
+            <img src="../images/TheRoadAhead_BlackLogo22.png" alt="Home">
+        </a>
+        <div class="nav-center">
+            <a href="AboutUs.html">ABOUT US</a>
+            <a href="DevBlog.html" />DEVBLOG</a>
+            <a href=""></a>
+        </div>
+    </nav>
+
+
+    <main>
+
+    <h1>
+        DEVBLOG
+    </h1>
+
+
+        <section class="concept">
+
+            <h2>*HEADING*</h2>
+            <p>
+                Blablablablablbl Sashay Away
+            </p>
+
+
+        </section>
+        <section class="trailer"></section>
+        <h2>ANOTHER HEADING</h2>
+        <!-- Trailer here -->
+        </section>
+
+        <!-- Contact box -->
+
+        <section class="contact-box">
+
+
+            <div class="social-item">
+
+                <img src="images/Email.png" alt="Email">
+
+                <a href="mailto:theroadaheadgame@gmail.com">
+                    TheRoadAheadGame@gmail.com
+                </a>
+
+            </div>
+
+
+            <div class="social-item">
+
+                <img src="images/instagram.png" alt="Instagram">
+
+                <a href="https://www.instagram.com/theroadahead_game/">
+                    TheRoadAhead_Game
+                </a>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+        <p>&copy; 2026 Sanne Johanne Hermansen</p>
+    </footer>
+
+</body>
+
+</html>
