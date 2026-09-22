@@ -11,7 +11,8 @@
     <!-- Font import -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Voltaire&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Stint+Ultra+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 
     <style>
@@ -37,15 +38,15 @@
             z-index: 1000;
             width: 100%;
             padding: 15px 20px;
-            background-color: #7f7f7f;
+            background-color: #1A1A1A;
             display: flex;
             align-items: center;
         }
 
             nav a {
-                font-family: 'Voltaire', sans-serif;
+                font-family: "Stint Ultra Condensed", serif;
                 font-weight: bold;
-                color: #1A1A1A;
+                color: #ffff;
                 text-decoration: none;
             }
 
@@ -66,7 +67,7 @@
 
 
             .home-link span {
-                font-family: 'Voltaire', sans-serif;
+                font-family: "Stint Ultra Condensed", serif;
                 font-size: 1.5rem;
             }
 
@@ -80,21 +81,26 @@
         }
 
             .nav-center a {
-                font-family: 'Voltaire', sans-serif;
+                font-family: "Stint Ultra Condensed", serif;
                 font-weight: bold;
-                font-size: clamp(1rem, 1.5vw, 1.2rem);
-                color: #1A1A1A;
+                font-size: clamp(1.2rem, 1.7vw, 1.4rem);
+                color: #ffff;
                 text-decoration: none;
             }
 
-                .nav-center a:hover {
-                    text-decoration: underline;
-                }
+        .nav img {
+            height: 10%;
+            width: 10%;
+        }
+
+        .nav-center a:hover {
+            text-decoration: underline;
+        }
 
         /* Hero title */
 
-        h1 {
-            font-family: 'Voltaire', sans-serif;
+        /* h1 {
+            font-family: "Stint Ultra Condensed", serif;
             margin: 0;
             font-size: clamp(4rem, 10vw, 9rem);
             line-height: 1.05;
@@ -106,29 +112,32 @@
         /* Hero section */
 
         .hero {
-            min-height: 500px;
-            padding-left: clamp(40px, 8vw, 150px);
-            padding-right: clamp(20px, 5vw, 100px);
-            background-image: url("images/TheRoadAhead_Hero.png");
+            /*  padding-left: clamp(40px, 8vw, 150px);
+            padding-right: clamp(20px, 5vw, 100px);*/
             background-size: cover;
             background-position: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: left;
+            overflow: hidden;
         }
 
+            .hero img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
 
             /* Hero description */
 
             .hero p {
                 max-width: 600px;
                 margin-top: 20px;
-                font-family: 'Voltaire', sans-serif;
+                font-family: "Stint Ultra Condensed", serif;
                 font-size: clamp(1rem, 2vw, 1.3rem);
                 line-height: 1.5;
-                color: #ffff;
-
+                color: #1A1A1A;
             }
 
 
@@ -145,28 +154,28 @@
             }
         }
 
-        .about-section {
+        .concept {
             padding-left: clamp(40px, 8vw, 150px);
             padding-right: clamp(20px, 5vw, 100px);
         }
 
-            .about-section h2 {
-                font-family: 'Voltaire', sans-serif;
+            .concept h2 {
+                font-family: "Stint Ultra Condensed", serif;
                 font-size: clamp(2rem, 5vw, 3rem);
-                color: #ffff;
+                color: #EAE2D7;
                 margin-top: -50px;
             }
 
-            .about-section p {
-                max-width: 800px;
-                font-family: 'Voltaire', sans-serif;
+            .concept p {
+                max-width: 700px;
+                font-family: "Roboto", sans-serif;
                 font-size: clamp(1rem, 2vw, 1.3rem);
                 line-height: 1.5;
                 color: #ffff;
             }
 
-        .contact-box{
-            font-family: 'Voltaire', sans-serif;
+        .contact-box {
+            font-family: "Stint Ultra Condensed", serif;
             color: #ffff;
         }
         /* Footer */
@@ -175,10 +184,10 @@
             text-align: center;
         }
 
-        footer p {
-            font-family: 'Voltaire', sans-serif;
-            color: #ffff;
-        }
+            footer p {
+                font-family: "Stint Ultra Condensed", serif;
+                color: #ffff;
+            }
     </style>
 
 
@@ -190,13 +199,12 @@
 
     <nav>
         <a href="index.html" class="home-link">
-            <img src="images/Logo.png" alt="Home">
-            <span>The Road Ahead</span>
+            <img src="images/TheRoadAhead_BlackLogo22.png" alt="Home">
         </a>
         <div class="nav-center">
-            <a href="">Link</a>
-            <a href="">Link</a>
-            <a href="">Link</a>
+            <a href="html/AboutUs.html">ABOUT US</a>
+            <a href="htmlf/DevBlog.html"/>DEVBLOG</a>
+            <a href=""></a>
         </div>
     </nav>
 
@@ -206,24 +214,19 @@
 
         <!-- Hero -->
 
+
         <header class="hero">
-
-            <h1>
-            
-            </h1>
-
+            <img src="images/TheRoadAhead_Hero.png" alt="The Road Ahead (Game Title)">
             <p>
-                A narrative-driven puzzle adventure that lets you step into the
-                life of a grieving widow as she learns to find her way back into
-                the world, one challenge at a time.
+                A narrative-driven puzzle adventure about grief, independence, and finding the courage to live again
             </p>
 
         </header>
 
 
-        <section class="about-section">
+        <section class="concept">
 
-            <h2>Concept </h2>
+            <h2>CONCEPT </h2>
             <p>
                 The Road Ahead is a narrative-driven puzzle adventure about grief,
                 independence, and finding the courage to live again. On a farm in
@@ -234,8 +237,12 @@
                 step back into the world on her own.
             </p>
 
-        </section>
 
+        </section>
+        <section class="trailer"></section>
+        <h2>TRAILER</h2>
+            <!-- Traler here -->
+        </section>
 
         <!-- Contact box -->
 
