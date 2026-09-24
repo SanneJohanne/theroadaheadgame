@@ -73,7 +73,7 @@
                 color: #EBEBEB;
                 text-decoration: none;
                 font-family: "Stint Ultra Condensed", serif;
-                font-size: clamp(1rem, 2vw, 1.3rem);
+                font-size: clamp(1.1rem, 2.2vw, 1.5rem);
                 white-space: nowrap;
                 transition: opacity 0.2s ease;
             }
@@ -97,6 +97,16 @@
         }
 
         /* Headings */
+        h1 {
+            margin: 50px auto 0;
+            font-family: "Stint Ultra Condensed", serif;
+            color: #483C2B;
+            font-size: clamp(3rem, 5vw, 4.2rem);
+            font-weight: normal;
+            line-height: 1;
+            text-align: center;
+            padding-top: 25px;
+        }
 
         h2 {
             margin: 0 0 clamp(20px, 3vw, 35px);
@@ -107,18 +117,21 @@
             line-height: 1;
         }
 
-        /* About Section */
-
-        .about {
-            width: min(90%, 1050px);
-            margin: clamp(60px,8vw,100px) auto 0;
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: clamp(40px, 6vw, 80px);
-            align-items: center;
+        /* Team Section */
+        .team{
+            width: min(90%,850px);
+            margin: 30px auto 0;
         }
 
-        .about-text p {
+
+        /* Introduction */
+        .team-intro{
+            width: 100%;
+            margin: 0;
+            text-align: left;
+        }
+
+        .team-intro p {
             margin: 0;
             font-family: "Source Sans 3", sans-serif;
             font-size: clamp(1rem, 1.5vw, 1.3rem);
@@ -126,25 +139,101 @@
             color: #483C2B;
         }
 
-        .about-image {
+        /*Team Members*/
+
+        .team-members{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0px;
+            margin: 30px 0 0;
+        }
+
+        /*Individual Member*/
+        .team-member{
+            text-align: left;
+            width:70%;
+            margin: 0 auto;
+        }
+
+        .team-member img{
+            display: block;
+            width: 100%;
+            aspect-ratio:1/1;
+            object-fit: cover;
+            margin-bottom: 25px;
+        }
+
+            .team-member h3 {
+                margin: 0 0 10px;
+                font-family: "Stint Ultra Condensed", serif;
+                font-size: clamp(1.5rem, 3vw, 2.2rem);
+                font-weight: normal;
+                color: #483C2B;
+            }
+
+            .team-member p {
+                margin: 0;
+                font-family: "Source Sans 3", sans-serif;
+                line-height: 1.5;
+                color: #483C2B;
+            }
+
+            /*Phone*/
+            @media (max-width: 600px) {
+
+                .team-members {
+                    grid-template-columns: 1fr;
+                    width: 80%;
+                    gap: 50px;
+                }
+            }
+
+            /*Tablet*/
+            @media (max-width: 900px) {
+                .team-members {
+                    width: 88%;
+                    gap: 45px;
+                }
+            }
+        /* Content Section */
+
+        .content-section {
+            width: min(90%, 850px);
+            margin: clamp(60px,8vw,100px) auto 0;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: clamp(40px, 6vw, 80px);
+            align-items: center;
+        }
+
+        .section-text {
+            width: 100%;
+        }
+
+            .section-text p {
+                margin: 0;
+                font-family: "Source Sans 3", sans-serif;
+                font-size: clamp(1rem, 1.5vw, 1.3rem);
+                line-height: 1.55;
+                color: #483C2B;
+            }
+
+        .section-image {
             width: 100%;
             aspect-ratio: 4 / 3;
             overflow: hidden;
         }
 
-            .about-image img {
+            .section-image img {
                 display: block;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
-
-
-
         /* Trailer Section */
 
         .presskit {
-            width: min(90%,1050px);
+            width: min(90%,850px);
             margin: clamp(70px, 9vw, 120px) auto 0;
         }
 
@@ -249,6 +338,8 @@
             font-size: 0.85rem;
             opacity: 0.8;
         }
+
+      
     </style>
 
 
@@ -271,46 +362,69 @@
 
     <main>
 
+        <h1>ABOUT US</h1>
 
+        <!-- Our Team -->
+        <section class="team">
 
-        <!-- About Us -->
-        <section class="about">
-            <div class="about-text">
+            <div class="team-intro">
                 <h2>THE TEAM</h2>
                 <p>
-                    The Road Ahead is a narrative-driven puzzle adventure about grief,
-                    independence, and finding the courage to live again. On a farm in
-                    1950’s rural America, you play as a widow who has isolated herself
-                    from the world after her husband’s death. She gradually rediscovers
-                    her confidence and independence by repairing her husband's old
-                    Model T and leaving their farm, eventually finding the courage to
-                    step back into the world on her own.
+                    We are a two-person team of game students at
+                    Kristiania University College in Oslo, Norway.
+                    <i>The Road Ahead</i> is our bachelor project, which we
+                    are developing during our final year of studies.
                 </p>
             </div>
 
-            <div class="about-image">
-                <img src="../images/fordpainting.png" alt="Ford Model T in watercolors">
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="../images/Sanne.png" alt="Sanne Johanne Hermansen">
+                    <h3>SANNE JOHANNE HERMANSEN</h3>
+                    <p>*Description*</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="../images/Marius.png" alt="Marius Møglestue">
+                    <h3>MARIUS MØGLESTUE</h3>
+                    <p>*Description*</p>
+                </div>
             </div>
 
         </section>
 
-        <section class="about">
-            <div class="about-text">
+        <section class="content-section">
+            <div class="section-text">
                 <h2>BEHIND THE PROJECT</h2>
                 <p>
-                    The Road Ahead is our Bachelor project. etc...
+                    The idea for <i>The Road Ahead</i> came from the different interests 
+                    we each have within games. When we decided to create something 
+                    together, we wanted to find a way to combine our different
+                    passions into one project. This led to a concept that mixes 
+                    emotional storytelling with the 
                 </p>
             </div>
-        </section>
 
-        <section class="about">
-            <div class="about-text">
+            <div class="section-image">
+                <img src="../images/xx.png" alt="xx">
+            </div>
+
+        </section>
+        <section class="content-section">
+            <div class="section-text">
                 <h2>OUR INSPIRATION</h2>
                 <p>
-                   *Creative influences behind the project*
+                    We draw inspiration from games that use atmosphere and visual
+                    storytelling to communicate emotions etc.
                 </p>
             </div>
+
+            <div class="section-image">
+                <img src="../images/xx.png" alt="xx">
+            </div>
+
         </section>
+
 
         <!-- PressKit -->
 

@@ -73,7 +73,7 @@
                 color: #EBEBEB;
                 text-decoration: none;
                 font-family: "Stint Ultra Condensed", serif;
-                font-size: clamp(1rem, 2vw, 1.3rem);
+                font-size: clamp(1.1rem, 2.2vw, 1.5rem);
                 white-space: nowrap;
                 transition: opacity 0.2s ease;
             }
@@ -98,8 +98,8 @@
         /*Intro*/
 
         .intro {
-            width: min(90%, 800px);
-            margin: 60px auto 0;
+            width: min(90%, 850px);
+            margin: 50px auto 0;
             text-align: left;
         }
         .intro p {
@@ -135,23 +135,25 @@
         /* Content Section */
 
         .content-section {
-            width: min(90%, 1050px);
+            width: min(90%, 850px);
             margin: clamp(60px,8vw,100px) auto 0;
             display: grid;
             grid-template-columns: 1.5fr 1fr;
             gap: clamp(40px, 6vw, 80px);
             align-items: center;
         }
-        .section-text{
+
+        .section-text {
             width: 100%;
         }
-        .section-text p {
-            margin: 0;
-            font-family: "Source Sans 3", sans-serif;
-            font-size: clamp(1rem, 1.5vw, 1.3rem);
-            line-height: 1.55;
-            color: #483C2B;
-        }
+
+            .section-text p {
+                margin: 0;
+                font-family: "Source Sans 3", sans-serif;
+                font-size: clamp(1rem, 1.5vw, 1.3rem);
+                line-height: 1.55;
+                color: #483C2B;
+            }
 
         .section-image {
             width: 100%;
@@ -309,18 +311,19 @@
     <main>
 
         <section class="intro">
-        <h1>DEVBLOG</h1>
-        <p>
-            Welcome to our development journal!
-            This is where we'll document the journey
-            behind The Road Ahead. We share ideas,
-            things we create, and the challenges we
-            encounter along the way. From the first sketches
-            to the finished road ahead, follow our progress
-            as the game takes shape.
-        </p>
+            <h1>DEVBLOG</h1>
+            <p>
+                Welcome to our development journal!
+                This is where we'll document the journey
+                behind The Road Ahead. We share ideas,
+                things we create, and the challenges we
+                encounter along the way. From the first sketches
+                to the finished road ahead, follow our progress
+                as the game takes shape.
+            </p>
         </section>
-        <!-- Concept -->
+
+        <!-- Posts -->
         <section class="content-section">
             <div class="section-text">
                 <h2>POST 1 - *DATE*</h2>
@@ -330,7 +333,7 @@
             </div>
 
             <div class="section-image">
-                <img src="../images/fordpainting.png" alt="Ford Model T in watercolors">
+                <img src="../images/xx.png" alt="xx">
             </div>
 
         </section>
@@ -339,7 +342,7 @@
 
 
             <div class="section-image">
-                <img src="../images/fordpainting.png" alt="Ford Model T in watercolors">
+                <img src="../images/xx.png" alt="xx">
             </div>
             <div class="section-text">
                 <h2>POST 2 - *DATE*</h2>
@@ -348,6 +351,35 @@
                 </p>
             </div>
 
+
+        </section>
+
+        <section class="content-section">
+            <div class="section-text">
+                <h2>POST 3 - *DATE*</h2>
+                <p>
+                    *Description*
+                </p>
+            </div>
+
+            <div class="section-image">
+                <img src="../images/xx.png" alt="xx">
+            </div>
+
+        </section>
+
+        <section class="content-section reversed">
+
+
+            <div class="section-image">
+                <img src="../images/xx.png" alt="xx">
+            </div>
+            <div class="section-text">
+                <h2>POST 4 - *DATE*</h2>
+                <p>
+                    *Description*
+                </p>
+            </div>
 
 
         </section>
