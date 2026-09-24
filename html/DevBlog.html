@@ -95,8 +95,33 @@
         main {
             width: 100%;
         }
+        /*Intro*/
+
+        .intro {
+            width: min(90%, 800px);
+            margin: 60px auto 0;
+            text-align: left;
+        }
+        .intro p {
+            margin: 0;
+            font-family: "Source Sans 3", sans-serif;
+            font-size: clamp(1rem, 1.5vw, 1.3rem);
+            line-height: 1.55;
+            color: #483C2B;
+        }
 
         /* Headings */
+        h1 {
+            margin: 0 0 clamp(20px, 3vw, 35px);
+            font-family: "Stint Ultra Condensed", serif;
+            color: #483C2B;
+            font-size: clamp(3rem, 5vw, 4.2rem);
+            font-weight: normal;
+            line-height: 1;
+            text-align: center;
+            padding-top: 25px;
+        }
+
 
         h2 {
             margin: 0 0 clamp(20px, 3vw, 35px);
@@ -107,9 +132,9 @@
             line-height: 1;
         }
 
-        /* Concept Section */
+        /* Content Section */
 
-        .concept {
+        .content-section {
             width: min(90%, 1050px);
             margin: clamp(60px,8vw,100px) auto 0;
             display: grid;
@@ -117,8 +142,10 @@
             gap: clamp(40px, 6vw, 80px);
             align-items: center;
         }
-
-        .concept-text p {
+        .section-text{
+            width: 100%;
+        }
+        .section-text p {
             margin: 0;
             font-family: "Source Sans 3", sans-serif;
             font-size: clamp(1rem, 1.5vw, 1.3rem);
@@ -126,13 +153,13 @@
             color: #483C2B;
         }
 
-        .concept-image {
+        .section-image {
             width: 100%;
             aspect-ratio: 4 / 3;
             overflow: hidden;
         }
 
-            .concept-image img {
+            .section-image img {
                 display: block;
                 width: 100%;
                 height: 100%;
@@ -141,9 +168,32 @@
 
 
 
-        /* Trailer Section */
+        /* Reversed Section */
 
-        .trailer {
+        .content-section.reversed {
+            grid-template-columns: 1fr 1.5fr;
+        }
+
+       
+
+        /*Tablet*/
+        @media (max-width: 900px) {
+            .content-section {
+                width: 88%;
+                gap: 40px;
+            }
+        }
+
+        /*Phone*/
+        @media(max-width: 600px){
+            .content-section{
+                width: 88%;
+                grid-template-columns: 1fr;
+                gap:35px;
+            }
+        }
+        
+        /*.trailer {
             width: min(90%,1050px);
             margin: clamp(70px, 9vw, 120px) auto 0;
         }
@@ -160,7 +210,7 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-            }
+            }*/
 
         /* .video-container iframe{
             display: block;
@@ -258,56 +308,53 @@
 
     <main>
 
-
-
+        <section class="intro">
+        <h1>DEVBLOG</h1>
+        <p>
+            Welcome to our development journal!
+            This is where we'll document the journey
+            behind The Road Ahead. We share ideas,
+            things we create, and the challenges we
+            encounter along the way. From the first sketches
+            to the finished road ahead, follow our progress
+            as the game takes shape.
+        </p>
+        </section>
         <!-- Concept -->
-        <section class="concept">
-            <div class="concept-text">
-                <h2>DEVBLOG</h2>
+        <section class="content-section">
+            <div class="section-text">
+                <h2>POST 1 - *DATE*</h2>
                 <p>
-                    The Road Ahead is a narrative-driven puzzle adventure about grief,
-                    independence, and finding the courage to live again. On a farm in
-                    1950’s rural America, you play as a widow who has isolated herself
-                    from the world after her husband’s death. She gradually rediscovers
-                    her confidence and independence by repairing her husband's old
-                    Model T and leaving their farm, eventually finding the courage to
-                    step back into the world on her own.
+                    *Description*
                 </p>
             </div>
 
-            <div class="concept-image">
+            <div class="section-image">
                 <img src="../images/fordpainting.png" alt="Ford Model T in watercolors">
             </div>
 
         </section>
 
-        <!-- Trailer -->
-
-        <section class="trailer">
-
-            <h2>TRAILER</h2>
-
-            <div class="video-container">
-
-                <video controls poster="../images/trailerposter.png">
-                    <source src="../videos/*TITLE*" type="video/mp4">
-
-                    Your browser does not support the video tag.
-
-                </video>
+        <section class="content-section reversed">
 
 
-
-                <!-- YOUTUBE:
-                    <iframe src="*LINK"
-                        title="The Road Ahead Trailer"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                </iframe> -->
-
+            <div class="section-image">
+                <img src="../images/fordpainting.png" alt="Ford Model T in watercolors">
+            </div>
+            <div class="section-text">
+                <h2>POST 2 - *DATE*</h2>
+                <p>
+                    *Description*
+                </p>
             </div>
 
+
+
         </section>
+
+        <!-- Trailer -->
+
+
 
     </main>
 
