@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Stint+Ultra+Condensed&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 
 
     <style>
@@ -21,12 +21,19 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
 
         /* General page */
 
         body {
             margin: 0;
-            background-color: #1A1A1A;
+            background-image: url("../images/PaperBackground.png");
+            background-repeat: repeat;
+            font-family: "Source Sans 3", sans-serif;
+            /*background-size: 800px auto;*/
         }
 
 
@@ -37,18 +44,43 @@
             top: 0;
             z-index: 1000;
             width: 100%;
-            padding: 15px 20px;
-            background-color: #1A1A1A;
+            background-color: #64605B;
             display: flex;
             align-items: center;
+            padding: 8px clamp(20px, 4vw, 60px);
         }
 
-            nav a {
-                font-family: "Stint Ultra Condensed", serif;
-                font-weight: bold;
-                color: #ffff;
-                text-decoration: none;
+        .logo {
+            display: block;
+        }
+
+            .logo img {
+                display: block;
+                width: auto;
+                height: clamp(32px, 4vw, 42px);
             }
+
+        .nav-links {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: clamp(25px, 5vw, 60px);
+        }
+
+            .nav-links a {
+                color: #EBEBEB;
+                text-decoration: none;
+                font-family: "Stint Ultra Condensed", serif;
+                font-size: clamp(1rem, 2vw, 1.3rem);
+                white-space: nowrap;
+                transition: opacity 0.2s ease;
+            }
+
+                .nav-links a:hover {
+                    opacity: 0.7;
+                }
 
         @media (max-width: 600px) {
             nav {
@@ -57,110 +89,153 @@
             }
         }
 
-        .home-link {
-            display: flex;
+
+        /* Main */
+
+        main {
+            width: 100%;
+        }
+
+        /* Headings */
+
+        h2 {
+            margin: 0 0 clamp(20px, 3vw, 35px);
+            font-family: "Stint Ultra Condensed", serif;
+            color: #483C2B;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: normal;
+            line-height: 1;
+        }
+
+        /* Concept Section */
+
+        .concept {
+            width: min(90%, 1050px);
+            margin: clamp(60px,8vw,100px) auto 0;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: clamp(40px, 6vw, 80px);
             align-items: center;
-            gap: 10px;
-            color: #ffff;
-            text-decoration: none;
         }
 
+        .concept-text p {
+            margin: 0;
+            font-family: "Source Sans 3", sans-serif;
+            font-size: clamp(1rem, 1.5vw, 1.3rem);
+            line-height: 1.55;
+            color: #483C2B;
+        }
 
-            .home-link span {
-                font-family: "Stint Ultra Condensed", serif;
-                font-size: 1.5rem;
+        .concept-image {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+        }
+
+            .concept-image img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
 
-        .nav-center {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            align-items: center;
-            gap: 100px;
+
+
+        /* Trailer Section */
+
+        .trailer {
+            width: min(90%,1050px);
+            margin: clamp(70px, 9vw, 120px) auto 0;
         }
 
-            .nav-center a {
-                font-family: "Stint Ultra Condensed", serif;
-                font-weight: bold;
-                font-size: clamp(1.2rem, 1.7vw, 1.4rem);
-                color: #ffff;
-                text-decoration: none;
+        .video-container {
+            width: min(80%,800px);
+            margin: 0 auto;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+        }
+
+            .video-container video {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
 
-        .nav img {
-            height: 10%;
-            width: 10%;
-        }
+        /* .video-container iframe{
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: none;
+        } */
 
-        .nav-center a:hover {
-            text-decoration: underline;
-        }
-
-
-        /* Phone */
-
-        @media (max-width: 600px) {
-            .hero {
-                min-height: 350px;
-            }
-
-            .social-item {
-                gap: 10px;
-            }
-        }
-
-        .Heading {
-            padding-left: clamp(40px, 8vw, 150px);
-            padding-right: clamp(20px, 5vw, 100px);
-        }
-
-        h1 {
-            font-family: "Stint Ultra Condensed", serif;
-            font-size: clamp(2rem, 5vw, 3rem);
-            color: #EAE2D7;
-        }
-
-        .Heading p {
-            max-width: 700px;
-            font-family: "Roboto", sans-serif;
-            font-size: clamp(1rem, 2vw, 1.3rem);
-            line-height: 1.5;
-            color: #ffff;
-        }
-
-        .other h2 {
-            font-family: "Stint Ultra Condensed", serif;
-            font-size: clamp(2rem, 5vw, 3rem);
-            color: #EAE2D7;
-            padding-left: clamp(40px, 8vw, 150px);
-            padding-right: clamp(20px, 5vw, 100px);
-        }
-
-        .other p {
-            max-width: 700px;
-            font-family: "Roboto", sans-serif;
-            font-size: clamp(1rem, 2vw, 1.3rem);
-            line-height: 1.5;
-            color: #ffff;
-            padding-left: clamp(40px, 8vw, 150px);
-            padding-right: clamp(20px, 5vw, 100px);
-        }
-
-        .contact-box {
-            font-family: "Stint Ultra Condensed", serif;
-            color: #ffff;
-        }
         /* Footer */
         footer {
-            padding: 20px;
+            width: 100%;
+            margin-top: 100px;
+            padding: 50px 20px;
+            background-color: #64605B;
             text-align: center;
         }
 
-            footer p {
+        .footer-content {
+            width: min(90%, 700px);
+            margin: 0 auto;
+        }
+
+            .footer-content h2 {
+                margin: 0 0 20px;
                 font-family: "Stint Ultra Condensed", serif;
-                color: #ffff;
+                font-size: clamp(1.5rem, 3vw, 2.2rem);
+                font-weight: normal;
+                color: #EBEBEB;
             }
+
+                .footer-content h2:nth-of-type(2) {
+                    margin-top: 45px;
+                }
+
+            .footer-content p {
+                margin: 10px 10px;
+                font-family: "Source Sans 3", sans-serif;
+                color: #EBEBEB;
+                line-height: 1.5;
+            }
+
+            .footer-content > a {
+                color: #EBEBEB;
+                text-decoration: none;
+            }
+
+                .footer-content > a:hover {
+                    text-decoration: underline;
+                }
+
+        /* Social links */
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: clamp(20px, 4vw, 40px);
+            margin: 25px 0;
+        }
+
+            .social-links a {
+                color: #EBEBEB;
+                text-decoration: none;
+                font-family: "Source Sans 3", sans-serif;
+            }
+
+                .social-links a:hover {
+                    text-decoration: underline;
+                }
+
+        .copyright {
+            margin-top: 30px !important;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
     </style>
 
 
@@ -168,16 +243,15 @@
 
 <body>
 
-    <!-- Navigation -->
+    <!-- Navigation bar -->
 
-    <nav>
-        <a href="../index.html" class="home-link">
+    <nav class="navbar">
+        <a href="../index.html" class="logo">
             <img src="../images/TheRoadAhead_BlackLogo22.png" alt="Home">
         </a>
-        <div class="nav-center">
+        <div class="nav-links">
             <a href="AboutUs.html">ABOUT US</a>
-            <a href="DevBlog.html" />DEVBLOG</a>
-            <a href=""></a>
+            <a href="DevBlog.html">DEVBLOG</a>
         </div>
     </nav>
 
@@ -186,56 +260,78 @@
 
 
 
-        <section class="Heading">
-
-            <h1>*HEADING*</h1>
-            <p>
-                Blablablablabl SASHAY AWAY!!
-            </p>
-
-
-        </section>
-        <section class="other">
-            <h2>ANOTHER HEADING</h2>
-            <p>Too bad.</p>
-        </section>
-
-        <!-- Contact box -->
-
-        <section class="contact-box">
-
-
-            <div class="social-item">
-
-                <img src="images/Email.png" alt="Email">
-
-                <a href="mailto:theroadaheadgame@gmail.com">
-                    TheRoadAheadGame@gmail.com
-                </a>
-
+        <!-- Concept -->
+        <section class="concept">
+            <div class="concept-text">
+                <h2>DEVBLOG</h2>
+                <p>
+                    The Road Ahead is a narrative-driven puzzle adventure about grief,
+                    independence, and finding the courage to live again. On a farm in
+                    1950’s rural America, you play as a widow who has isolated herself
+                    from the world after her husband’s death. She gradually rediscovers
+                    her confidence and independence by repairing her husband's old
+                    Model T and leaving their farm, eventually finding the courage to
+                    step back into the world on her own.
+                </p>
             </div>
 
-
-            <div class="social-item">
-
-                <img src="images/instagram.png" alt="Instagram">
-
-                <a href="https://www.instagram.com/theroadahead_game/">
-                    TheRoadAhead_Game
-                </a>
-
+            <div class="concept-image">
+                <img src="../images/fordpainting.png" alt="Ford Model T in watercolors">
             </div>
 
+        </section>
+
+        <!-- Trailer -->
+
+        <section class="trailer">
+
+            <h2>TRAILER</h2>
+
+            <div class="video-container">
+
+                <video controls poster="../images/trailerposter.png">
+                    <source src="../videos/*TITLE*" type="video/mp4">
+
+                    Your browser does not support the video tag.
+
+                </video>
+
+
+
+                <!-- YOUTUBE:
+                    <iframe src="*LINK"
+                        title="The Road Ahead Trailer"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe> -->
+
+            </div>
 
         </section>
 
     </main>
 
-
     <!-- Footer -->
 
     <footer>
-        <p>&copy; 2026 Sanne Johanne Hermansen</p>
+        <div class="footer-content">
+
+            <h2>CONTACT:</h2>
+            <a href="mailto:theroadaheadgame@gmail.com">
+                TheRoadAheadGame@gmail.com
+            </a>
+            <h2>FIND US ON:</h2>
+            <div class="social-links">
+                <a href="https://www.instagram.com/theroadahead_game">Instagram</a>
+                <a href="https://www.youtube.com/@TheRoadAheadGame">YouTube</a>
+                <a href="#">Facebook</a>
+
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2026 The Road Ahead</p>
+            </div>
+        </div>
     </footer>
 
 </body>
