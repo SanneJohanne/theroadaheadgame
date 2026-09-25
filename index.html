@@ -14,14 +14,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Stint+Ultra+Condensed&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 
-
+    <!-- Icon -->
+    <link rel="icon" type="png" href="images/TheRoadAheadIcon.png">
     <style>
 
         * {
             box-sizing: border-box;
         }
 
-        html{
+        html {
             scroll-behavior: smooth;
         }
 
@@ -47,29 +48,26 @@
             background-color: #64605B;
             display: flex;
             align-items: center;
-            
             padding: 8px 15px;
         }
 
-        .logo{
+        .logo {
             display: block;
         }
 
-        .logo img{
-            display: block;
+            .logo img {
+                display: block;
+                width: auto;
+                height: clamp(40px, 5vw, 55px);
+            }
 
-            width: auto;
-            height: clamp(40px, 5vw, 55px);
-        }
-
-        .nav-links{
+        .nav-links {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
             align-items: center;
             gap: clamp(25px, 5vw, 60px);
-           
         }
 
             .nav-links a {
@@ -80,10 +78,10 @@
                 white-space: nowrap;
                 transition: opacity 0.2s ease;
             }
-          
-        .nav-links a:hover{
-            opacity: 0.7;
-        }
+
+                .nav-links a:hover {
+                    opacity: 0.7;
+                }
 
         @media (max-width: 600px) {
             nav {
@@ -94,7 +92,7 @@
         /* Hero */
 
         .hero {
-            width:100%;
+            width: 100%;
             overflow: hidden;
         }
 
@@ -106,7 +104,7 @@
 
         /* Main */
 
-        main{
+        main {
             width: 100%;
         }
 
@@ -140,21 +138,21 @@
             color: #483C2B;
         }
 
-        .concept-image{
+        .concept-image {
             width: 100%;
             aspect-ratio: 4 / 3;
             overflow: hidden;
         }
 
-        .concept-image img{
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+            .concept-image img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         /*Tablet*/
         @media (max-width: 900px) {
-            .concept{
+            .concept {
                 width: 88%;
                 gap: 40px;
             }
@@ -162,7 +160,7 @@
 
         /*Phone*/
         @media(max-width: 600px) {
-            .concept{
+            .concept {
                 width: 88%;
                 grid-template-columns: 1fr;
                 gap: 35px;
@@ -178,21 +176,21 @@
             margin: clamp(70px, 9vw, 120px) auto 0;
         }
 
-        .video-container{
+        .video-container {
             width: min(100%,1000px);
             margin: 0;
             aspect-ratio: 16 / 9;
             overflow: hidden;
         }
 
-        .video-container video{
-            display: block;
-            width: 100%;
-            height:100%;
-            object-fit: cover;
-        }
+            .video-container video {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
 
-       /* .video-container iframe{
+        /* .video-container iframe{
             display: block;
             width: 100%;
             height: 100%;
@@ -213,7 +211,7 @@
             margin: 0 auto;
         }
 
-            .footer-content h2{
+            .footer-content h2 {
                 margin: 0 0 20px;
                 font-family: "Stint Ultra Condensed", serif;
                 font-size: clamp(1.5rem, 3vw, 2.2rem);
@@ -221,7 +219,7 @@
                 color: #EBEBEB;
             }
 
-            .footer-content h2:nth-of-type(2) {
+                .footer-content h2:nth-of-type(2) {
                     margin-top: 45px;
                 }
 
@@ -237,20 +235,20 @@
                 text-decoration: none;
             }
 
-            .footer-content > a:hover {
+                .footer-content > a:hover {
                     text-decoration: underline;
-            }
+                }
 
-            .kristiania-logo{
-                margin-top: 35px;
-                text-align: center;
-            }
+        .kristiania-logo {
+            margin-top: 35px;
+            text-align: center;
+        }
 
-            .kristiania-logo img{
+            .kristiania-logo img {
                 width: 140px;
-                height:auto;
+                height: auto;
             }
-      
+
         /* Social links */
 
         .social-links {
@@ -267,17 +265,15 @@
                 font-family: "Source Sans 3", sans-serif;
             }
 
-            .social-links a:hover{
-                text-decoration: underline;
-            }
+                .social-links a:hover {
+                    text-decoration: underline;
+                }
 
-            .copyright{
-                margin-top: 30px !important;
-                font-size: 0.85rem;
-                opacity: 0.8;
-            }
-
-
+        .copyright {
+            margin-top: 30px !important;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
     </style>
 
 
