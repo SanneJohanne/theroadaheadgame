@@ -14,6 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Stint+Ultra+Condensed&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 
+    <!-- Icon -->
+    <link rel="icon" type="png" href="../images/TheRoadAheadIcon.png">
 
     <style>
 
@@ -102,13 +104,14 @@
             margin: 50px auto 0;
             text-align: left;
         }
-        .intro p {
-            margin: 0;
-            font-family: "Source Sans 3", sans-serif;
-            font-size: clamp(1rem, 1.5vw, 1.3rem);
-            line-height: 1.55;
-            color: #483C2B;
-        }
+
+            .intro p {
+                margin: 0;
+                font-family: "Source Sans 3", sans-serif;
+                font-size: clamp(1rem, 1.5vw, 1.3rem);
+                line-height: 1.55;
+                color: #483C2B;
+            }
 
         /* Headings */
         h1 {
@@ -176,33 +179,35 @@
             grid-template-columns: 1fr 1.5fr;
         }
 
-       
+
 
         /*Tablet*/
         @media (max-width: 900px) {
             .content-section,
-            .content-section.reversed{
+            .content-section.reversed {
                 width: 88%;
                 gap: 40px;
             }
         }
 
         /*Phone*/
-        @media(max-width: 600px){
+        @media(max-width: 600px) {
             .content-section,
-            .content-section.reversed{
+            .content-section.reversed {
                 width: 88%;
                 grid-template-columns: 1fr;
-                gap:35px;
+                gap: 35px;
             }
-            .content-section.reversed .section-text{
-                order:1;
-            }
-            .content-section.reversed .section-image{
-                order:2;
-            }
+
+                .content-section.reversed .section-text {
+                    order: 1;
+                }
+
+                .content-section.reversed .section-image {
+                    order: 2;
+                }
         }
-        
+
         /*.trailer {
             width: min(90%,1050px);
             margin: clamp(70px, 9vw, 120px) auto 0;
