@@ -168,7 +168,7 @@
             .team-member h3 {
                 margin: 0 0 10px;
                 font-family: "Stint Ultra Condensed", serif;
-                font-size: clamp(1.5rem, 3vw, 2.2rem);
+                font-size: clamp(1.3rem, 2.5vw, 2rem);
                 font-weight: normal;
                 color: #483C2B;
             }
@@ -205,12 +205,14 @@
 
         .content-section {
             width: min(90%, 850px);
-            margin: clamp(60px,8vw,100px) auto 0;
+            margin:clamp(30px, 4vw, 50px) auto 0;
             display: grid;
             grid-template-columns: 1.5fr 1fr;
             gap: clamp(40px, 6vw, 80px);
             align-items: center;
         }
+
+            
 
         .section-text {
             width: 100%;
@@ -237,6 +239,25 @@
                 object-fit: cover;
             }
 
+        .content-section.reversed {
+            grid-template-columns: 1fr 1.5fr;
+        }
+
+        .content-section.reversed .section-image {
+                order: 1;
+        }
+
+        .content-section.reversed .section-text {
+                order: 2;
+        }
+        
+        .behind-heading {
+            width: min(90%, 850px);
+            margin: clamp(60px, 8vw, 100px) auto 0;
+        }
+
+
+
         /*Tablet*/
         @media (max-width: 900px) {
             .content-section {
@@ -247,12 +268,31 @@
 
         /*Phone*/
         @media(max-width:600px) {
-            .content-section {
+            .content-section,
+            .content-section.reversed {
                 width: 88%;
                 grid-template-columns: 1fr;
                 gap: 35px;
             }
+
+                .content-section .section-text {
+                    order: 1;
+                }
+
+                .content-section .section-image {
+                    order: 2;
+                }
+
+                .content-section.reversed .section-text {
+                    order: 1;
+                }
+
+                .content-section.reversed .section-image {
+                    order: 2;
+                }
         }
+       
+
         /* Trailer Section */
 
         .presskit {
@@ -272,6 +312,14 @@
                     text-decoration: underline;
                     opacity: 0.7;
                 }
+
+            .presskit p {
+                margin: 0;
+                font-family: "Source Sans 3", sans-serif;
+                font-size: clamp(1rem, 1.5vw, 1.3rem);
+                line-height: 1.55;
+                color: #483C2B;
+            }
 
         /*  .video-container {
             width: min(80%,800px);
@@ -418,7 +466,12 @@
                     We are a two-person team of game students at
                     Kristiania University College in Oslo, Norway.
                     <i>The Road Ahead</i> is our bachelor project, which we
-                    are developing during our final year of studies.
+                    are developing during our final year of studies.<br><br>
+
+                    As a small team, we both take part in all aspects of developing
+                    <i>The Road Ahead</i>. We each take on more responsibility in
+                    the areas we are strongest in, but we always share ideas and
+                    make the final decisions together. <br>
                 </p>
             </div>
 
@@ -426,32 +479,75 @@
                 <div class="team-member">
                     <img src="../images/Sanne.png" alt="Sanne Johanne Hermansen">
                     <h3>SANNE JOHANNE HERMANSEN</h3>
-                    <p>*Description*</p>
+                    <p>
+                        2D & 3D Art, Narrative, Level Design
+
+                    </p>
                 </div>
 
                 <div class="team-member">
                     <img src="../images/Marius.png" alt="Marius Møglestue">
                     <h3>MARIUS MØGLESTUE</h3>
-                    <p>*Description*</p>
+                    <p>
+                        Programming, System & Level Design, 3D Art
+
+                    </p>
                 </div>
+            </div>
+
+        </section>
+
+        <h2 class="behind-heading">BEHIND THE PROJECT</h2>
+
+        <section class="content-section">
+            <div class="section-text">
+               
+                <p>
+                    The idea for <i>The Road Ahead</i> came from the different interests
+                    we each have within games. We already knew we wanted to create something
+                    together, and rather than choosing between our different interests, we wanted
+                    to find a way to combine them into one game.
+                </p>
+            </div>
+
+            <div class="section-image">
+                <img src="../images/Sketch1.png" alt="test">
+            </div>
+
+        </section>
+
+        <section class="content-section reversed">
+            <div class="section-text">
+
+                <p>
+                    The concept became a compromise between our interest in cars and driving,
+                    and our interest in more narrative-driven experiences and more emotional
+                    storytelling. We wanted the car to be more than just a gameplay element,
+                    making it an important part of the story and a symbol of something deeper
+                    within it. Through restoring the car, the player follows Susie's journey
+                    as she slowly finds her independence and learns to move forward.
+                </p>
+            </div>
+
+            <div class="section-image">
+                <img src="../images/test.png" alt="test">
             </div>
 
         </section>
 
         <section class="content-section">
             <div class="section-text">
-                <h2>BEHIND THE PROJECT</h2>
+
                 <p>
-                    The idea for <i>The Road Ahead</i> came from the different interests 
-                    we each have within games. When we decided to create something 
-                    together, we wanted to find a way to combine our different
-                    passions into one project. This led to a concept that mixes 
-                    emotional storytelling with the 
+                    At first, we were unsure how well two ideas from such different sides of games would
+                    work together. Mixing a driving-focused game with something “deep and emotional”
+                    felt like a risk, but we hope that bringing them together can create something
+                    unique and meaningful.
                 </p>
             </div>
 
             <div class="section-image">
-                <img src="../images/xx.png" alt="xx">
+                <img src="../images/test.png" alt="test">
             </div>
 
         </section>
@@ -459,13 +555,25 @@
             <div class="section-text">
                 <h2>OUR INSPIRATION</h2>
                 <p>
-                    We draw inspiration from games that use atmosphere and visual
-                    storytelling to communicate emotions etc.
+                    Different games have inspired different parts of The Road Ahead.
+                    <a href="https://en.wikipedia.org/wiki/My_Summer_Car">My Summer Car</a> and
+                    <a href="https://en.wikipedia.org/wiki/Firewatch">Firewatch</a> have been
+                    important references for us,
+                    inspiring our ideas around car interaction, atmosphere and
+                    character-driven storytelling. We have also looked at narrative
+                    exploration games such as
+                    <a href="https://en.wikipedia.org/wiki/Dear_Esther">Dear Esther</a>,
+                    <a href="https://en.wikipedia.org/wiki/Gone_Home">Gone Home</a>, and 
+                    <a href="https://en.wikipedia.org/wiki/What_Remains_of_Edith_Finch">What Remains of Edith Finch</a>
+                    , particularly for their different approaches to
+                    exploration and storytelling. These influences are helping us explore
+                    how puzzle-solving, exploration and environmental storytelling
+                    could come together in The Road Ahead.
                 </p>
             </div>
 
             <div class="section-image">
-                <img src="../images/xx.png" alt="xx">
+                <img src="../images/InspirationGames.png" alt="Cover Art of the games used as inspiration in developing The Road Ahead">
             </div>
 
         </section>
@@ -477,28 +585,13 @@
 
             <h2>PRESSKIT</h2>
 
-            <a href="../downloads/Presskit.zip" download>
-                DOWNLOAD Presskit
-            </a>
+            <!--  <a href="../downloads/Presskit.zip" download>
+             DOWNLOAD Presskit
+             </a>-->
+            <p>Our press kit is currently in development and will be available soon.</p>
 
-            <!-- <div class="video-container">
 
-        <video controls poster="../images/trailerposter.png">
-            <source src="../videos/*TITLE*" type="video/mp4">
 
-            Your browser does not support the video tag.
-
-        </video>
-        -->
-            <!-- YOUTUBE:
-                    <iframe src="*LINK"
-                        title="The Road Ahead Trailer"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                </iframe>
-
-                    </div>
-        -->
         </section>
 
     </main>
