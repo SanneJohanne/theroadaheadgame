@@ -17,6 +17,16 @@
     <!-- Icon -->
     <link rel="icon" type="png" href="../images/TheRoadAheadIcon.png">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GZ9QG59412"></script>
+    <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-GZ9QG59412');
+    </script>
+
     <style>
 
         * {
@@ -189,7 +199,7 @@
                 gap: 15px;
             }
 
-            .team-member{
+            .team-member {
                 width: 100%;
             }
         }
@@ -205,14 +215,14 @@
 
         .content-section {
             width: min(90%, 850px);
-            margin:clamp(30px, 4vw, 50px) auto 0;
+            margin: clamp(30px, 4vw, 50px) auto 0;
             display: grid;
             grid-template-columns: 1.5fr 1fr;
             gap: clamp(40px, 6vw, 80px);
             align-items: center;
         }
 
-            
+
 
         .section-text {
             width: 100%;
@@ -243,14 +253,14 @@
             grid-template-columns: 1fr 1.5fr;
         }
 
-        .content-section.reversed .section-image {
+            .content-section.reversed .section-image {
                 order: 1;
-        }
+            }
 
-        .content-section.reversed .section-text {
+            .content-section.reversed .section-text {
                 order: 2;
-        }
-        
+            }
+
         .behind-heading {
             width: min(90%, 850px);
             margin: clamp(60px, 8vw, 100px) auto 0;
@@ -291,7 +301,7 @@
                     order: 2;
                 }
         }
-       
+
 
         /* Trailer Section */
 

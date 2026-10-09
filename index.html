@@ -17,6 +17,16 @@
     <!-- Icon -->
     <link rel="icon" type="png" href="images/TheRoadAheadIcon.png">
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GZ9QG59412"></script>
+    <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-GZ9QG59412');
+    </script>
+
     <style>
 
         * {
@@ -97,7 +107,7 @@
             overflow: hidden;
         }
 
-            .hero picture{
+            .hero picture {
                 display: block;
                 width: 100%;
             }
@@ -162,12 +172,11 @@
                 width: 88%;
                 gap: 40px;
             }
-
         }
 
         /*Phone*/
         @media(max-width: 600px) {
-           
+
             .concept {
                 width: 88%;
                 grid-template-columns: 1fr;
@@ -177,9 +186,7 @@
             .concept-image {
                 width: 40%;
                 margin: -20px auto -50px auto;
-              
             }
-
         }
 
 
