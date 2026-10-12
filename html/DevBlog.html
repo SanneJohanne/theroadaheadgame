@@ -1,12 +1,10 @@
 ﻿<!DOCTYPE html>
-
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>DevBlog</title>
+    <title>DevBlog | The Road Ahead</title>
+   
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GZ9QG59412"></script>
@@ -27,7 +25,6 @@
     <!-- Icon -->
     <link rel="icon" type="png" href="../images/TheRoadAheadIcon.png">
 
-
     <style>
 
         * {
@@ -38,19 +35,13 @@
             scroll-behavior: smooth;
         }
 
-
-        /* General page */
-
         body {
             margin: 0;
             background-image: url("../images/PaperBackground.png");
             background-repeat: repeat;
             font-family: "Source Sans 3", sans-serif;
-            /*background-size: 800px auto;*/
+            color: #483C2B;
         }
-
-
-        /* Navigation */
 
         nav {
             position: sticky;
@@ -88,161 +79,37 @@
                 font-family: "Stint Ultra Condensed", serif;
                 font-size: clamp(1.1rem, 2.2vw, 1.5rem);
                 white-space: nowrap;
-                transition: opacity 0.2s ease;
+                transition: opacity .2s ease;
             }
 
                 .nav-links a:hover {
-                    opacity: 0.7;
+                    opacity: .7;
                 }
 
-        @media (max-width: 600px) {
-            nav {
-                overflow-x: auto;
-                white-space: nowrap;
-            }
+        h1, h2, h3 {
+            font-family: "Stint Ultra Condensed", serif;
+            font-weight: normal;
         }
 
-
-        /* Main */
-
-        main {
-            width: 100%;
-        }
-        /*Intro*/
-
-        .intro {
-            width: min(90%, 850px);
-            margin: 50px auto 0;
-            text-align: left;
-        }
-
-            .intro p {
-                margin: 0;
-                font-family: "Source Sans 3", sans-serif;
-                font-size: clamp(1rem, 1.5vw, 1.3rem);
-                line-height: 1.55;
-                color: #483C2B;
-            }
-
-        /* Headings */
         h1 {
             margin: 0 0 clamp(20px, 3vw, 35px);
-            font-family: "Stint Ultra Condensed", serif;
-            color: #483C2B;
             font-size: clamp(3rem, 5vw, 4.2rem);
-            font-weight: normal;
             line-height: 1;
             text-align: center;
             padding-top: 25px;
         }
 
-
-        h2 {
-            margin: 0 0 clamp(20px, 3vw, 35px);
-            font-family: "Stint Ultra Condensed", serif;
-            color: #483C2B;
-            font-size: clamp(2rem, 4vw, 3.2rem);
-            font-weight: normal;
-            line-height: 1;
-        }
-
-        /* Content Section */
-
-        .content-section {
+        .intro {
             width: min(90%, 850px);
-            margin: clamp(60px,8vw,100px) auto 0;
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: clamp(40px, 6vw, 80px);
-            align-items: center;
+            margin: 50px auto 0;
         }
 
-        .section-text {
-            width: 100%;
-        }
-
-            .section-text p {
-                margin: 0;
-                font-family: "Source Sans 3", sans-serif;
+            .intro p, .post-content p {
+                margin: 0 0 20px;
                 font-size: clamp(1rem, 1.5vw, 1.3rem);
                 line-height: 1.55;
-                color: #483C2B;
             }
 
-        .section-image {
-            width: 100%;
-        }
-
-            .section-image img {
-                display: block;
-                width: 100%;
-                height: auto;
-            }
-
-
-
-        /* Reversed Section */
-
-        .content-section.reversed {
-            grid-template-columns: 1fr 1.5fr;
-        }
-
-
-
-        /*Tablet*/
-        @media (max-width: 900px) {
-            .content-section,
-            .content-section.reversed {
-                width: 88%;
-                gap: 40px;
-            }
-        }
-
-        /*Phone*/
-        @media(max-width: 600px) {
-            .content-section,
-            .content-section.reversed {
-                width: 88%;
-                grid-template-columns: 1fr;
-                gap: 35px;
-            }
-
-                .content-section.reversed .section-text {
-                    order: 1;
-                }
-
-                .content-section.reversed .section-image {
-                    order: 2;
-                }
-        }
-
-        /*.trailer {
-            width: min(90%,1050px);
-            margin: clamp(70px, 9vw, 120px) auto 0;
-        }
-
-        .video-container {
-            width: min(80%,800px);
-            margin: 0 auto;
-            aspect-ratio: 16 / 9;
-            overflow: hidden;
-        }
-
-            .video-container video {
-                display: block;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }*/
-
-        /* .video-container iframe{
-            display: block;
-            width: 100%;
-            height: 100%;
-            border: none;
-        } */
-
-        /* Footer */
         footer {
             width: 100%;
             margin-top: 100px;
@@ -258,9 +125,7 @@
 
             .footer-content h2 {
                 margin: 0 0 20px;
-                font-family: "Stint Ultra Condensed", serif;
                 font-size: clamp(1.5rem, 3vw, 2.2rem);
-                font-weight: normal;
                 color: #EBEBEB;
             }
 
@@ -269,8 +134,7 @@
                 }
 
             .footer-content p {
-                margin: 10px 10px;
-                font-family: "Source Sans 3", sans-serif;
+                margin: 10px;
                 color: #EBEBEB;
                 line-height: 1.5;
             }
@@ -284,6 +148,23 @@
                     text-decoration: underline;
                 }
 
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: clamp(20px, 4vw, 40px);
+            margin: 25px 0;
+        }
+
+            .social-links a {
+                color: #EBEBEB;
+                text-decoration: none;
+            }
+
+                .social-links a:hover {
+                    text-decoration: underline;
+                }
+
         .footer-logos {
             display: flex;
             justify-content: center;
@@ -292,8 +173,7 @@
             margin-top: 35px;
         }
 
-        .kristiania-logo,
-        .our-logo {
+        .kristiania-logo, .our-logo {
             text-align: center;
         }
 
@@ -307,43 +187,83 @@
                 height: auto;
             }
 
-        /* Social links */
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: clamp(20px, 4vw, 40px);
-            margin: 25px 0;
-        }
-
-            .social-links a {
-                color: #EBEBEB;
-                text-decoration: none;
-                font-family: "Source Sans 3", sans-serif;
-            }
-
-                .social-links a:hover {
-                    text-decoration: underline;
-                }
-
         .copyright {
             margin-top: 30px !important;
-            font-size: 0.85rem;
-            opacity: 0.8;
+            font-size: .85rem;
+            opacity: .8;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        }
+
+        .post-grid {
+            width: min(90%, 1100px);
+            margin: clamp(45px, 6vw, 75px) auto 0;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: clamp(24px, 3.5vw, 45px);
+        }
+
+        .post-card {
+            display: block;
+            min-width: 0;
+            color: inherit;
+            text-decoration: none;
+        }
+
+            .post-card img {
+                display: block;
+                width: 100%;
+                aspect-ratio: 4 / 3;
+                object-fit: cover;
+                object-position: center;
+                transition: opacity .2s ease;
+            }
+
+            .post-card:hover img {
+                opacity: .82;
+            }
+
+            .post-card h2 {
+                margin: 16px 0 6px;
+                font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+                line-height: 1.05;
+            }
+
+        .post-date {
+            margin: 0;
+            font-size: .95rem;
+            line-height: 1.4;
+            opacity: .8;
+        }
+
+        @media (max-width: 900px) {
+            .post-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .post-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .post-card h2 {
+                font-size: 2rem;
+            }
         }
     </style>
-
-
 </head>
-
 <body>
-
-    <!-- Navigation bar -->
 
     <nav class="navbar">
         <a href="../index.html" class="logo">
-            <img src="../images/TheRoadAhead_BlackLogo22.png" alt="Home">
+            <img src="../images/TheRoadAhead_BlackLogo22.png" alt="The Road Ahead home">
         </a>
         <div class="nav-links">
             <a href="AboutUs.html">ABOUT US</a>
@@ -351,124 +271,50 @@
         </div>
     </nav>
 
-
     <main>
-
         <section class="intro">
             <h1>DEVBLOG</h1>
             <p>
-                Welcome to our development journal!
-                This is where we'll document the journey
-                behind <i>The Road Ahead</i>. We share ideas,
-                things we create, and the challenges we
-                encounter along the way. From the first sketches
-                to the finished road ahead, follow our progress
-                as the game takes shape.
+                Welcome to our development journal! This is where we'll document the journey
+                behind <i>The Road Ahead</i>. We share ideas, things we create, and the challenges
+                we encounter along the way. From the first sketches to the finished road ahead,
+                follow our progress as the game takes shape.
             </p>
+        </section> 
+        <section class="post-grid" aria-label="DevBlog posts">
+
+            <!--Post 1-->
+            <a class="post-card" href="Post1.html">
+                <img src="../images/FordPainting.png" alt="Ford Model T in watercolors">
+                <h2>POST 1 - WHERE IT ALL STARTED</h2>
+                <p class="post-date">October 12, 2026</p>
+            </a>
+
         </section>
 
-       
-            <section class="content-section">
-                <div class="section-text">
-                    <h2></h2>
-                    <p>
-                        Development updates coming soon!
-                    </p>
-                    <!-- Posts  </div>
-
-                <div class="section-image">
-                    <img src="../images/FordPainting.png" alt="Ford Model T in Watercolor">
-
-                </div>
-
-            </section>
-
-            <section class="content-section reversed">
-
-
-                <div class="section-image">
-                    <img src="../images/WeddingPainting.png" alt="Watercolor/Painting">
-                </div>
-                <div class="section-text">
-                    <h2>POST 2 - *DATE*</h2>
-                    <p>
-                        *Description*
-                    </p>
-                </div>
-
-
-            </section>
-
-            <section class="content-section">
-                <div class="section-text">
-                    <h2>POST 3 - *DATE*</h2>
-                    <p>
-                        *Description*
-                    </p>
-                </div>
-
-                <div class="section-image">
-                    <img src="../images/WatercolorPaintings.png" alt="xx">
-                </div>
-
-            </section>
-
-            <section class="content-section reversed">
-
-
-                <div class="section-image">
-                    <img src="../images/xx.png" alt="xx">
-                </div>
-                <div class="section-text">
-                    <h2>POST 4 - *DATE*</h2>
-                    <p>
-                        *Description*
-                    </p>
-                </div>
-
-
-            </section>
-    -->
-                    <!-- Trailer -->
-
-
-
-</main>
-
-    <!-- Footer -->
+    </main>
 
     <footer>
         <div class="footer-content">
-
             <h2>CONTACT:</h2>
-            <a href="mailto:theroadaheadgame@gmail.com">
-                TheRoadAheadGame@gmail.com
-            </a>
+            <a href="mailto:theroadaheadgame@gmail.com">TheRoadAheadGame@gmail.com</a>
             <h2>FIND US ON:</h2>
             <div class="social-links">
                 <a href="https://www.instagram.com/theroadahead_game">Instagram</a>
                 <a href="https://www.youtube.com/@TheRoadAheadGame">YouTube</a>
                 <a href="https://www.facebook.com/profile.php?id=61594785977585">Facebook</a>
-
             </div>
-
             <div class="footer-logos">
-
                 <div class="kristiania-logo">
                     <img src="../images/Kristianialogo.png" alt="Kristiania University College">
                 </div>
-
                 <div class="our-logo">
-                    <img src="../images/TheRoadAhead_LogoWhite.png" alt="The Road Ahead Logo">
+                    <img src="../images/TheRoadAhead_LogoWhite.png" alt="The Road Ahead logo">
                 </div>
             </div>
-
-            <div class="copyright">
-                <p>&copy; 2026 Sanne Johanne Hermansen</p>
-            </div>
+            <div class="copyright"><p>&copy; 2026 Sanne Johanne Hermansen</p></div>
         </div>
     </footer>
 
 </body>
-
 </html>
