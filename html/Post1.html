@@ -3,230 +3,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Where It All Started | The Road Ahead</title>
+    <title>Post 1 - Devblog</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GZ9QG59412"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-GZ9QG59412');
+    </script>
+
+    <!-- Font import -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Stint+Ultra+Condensed&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="../images/TheRoadAheadIcon.png">
+
+    <!-- Icon -->
+    <link rel="icon" type="png" href="../images/TheRoadAheadIcon.png">
     <style>
-    
-* { box-sizing: border-box; }
-html { 
-    scroll-behavior: smooth; 
 
-}
-body {
-    margin: 0;
-    background-image: url("../images/PaperBackground.png");
-    background-repeat: repeat;
-    font-family: "Source Sans 3", sans-serif;
-    color: #483C2B;
-}
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-    background-color: #64605B;
-    display: flex;
-    align-items: center;
-    padding: 8px 15px;
-}
-.logo { 
-    display: block; 
+        * {
+            box-sizing: border-box;
+        }
 
-}
-.logo img {
-    display: block;
-    width: auto;
-    height: clamp(40px, 5vw, 55px);
-}
-.nav-links {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    gap: clamp(25px, 5vw, 60px);
-}
-.nav-links a {
-    color: #EBEBEB;
-    text-decoration: none;
-    font-family: "Stint Ultra Condensed", serif;
-    font-size: clamp(1.1rem, 2.2vw, 1.5rem);
-    white-space: nowrap;
-    transition: opacity .2s ease;
-}
-.nav-links a:hover { 
-    opacity: .7; 
+        html {
+            scroll-behavior: smooth;
+        }
 
-}
-h1, h2, h3 {
-    font-family: "Stint Ultra Condensed", serif;
-    font-weight: normal;
-}
-h1 {
-    margin: 0 0 clamp(20px, 3vw, 35px);
-    font-size: clamp(3rem, 5vw, 4.2rem);
-    line-height: 1;
-    text-align: center;
-    padding-top: 25px;
-}
-.intro {
-    width: min(90%, 850px);
-    margin: 50px auto 0;
-}
-.intro p, .post-content p {
-    margin: 0 0 20px;
-    font-size: clamp(1rem, 1.5vw, 1.3rem);
-    line-height: 1.55;
-}
-footer {
-    width: 100%;
-    margin-top: 100px;
-    padding: 50px 20px;
-    background-color: #64605B;
-    text-align: center;
-}
-.footer-content { 
-    width: min(90%, 700px); 
-    margin: 0 auto; 
+        body {
+            margin: 0;
+            background-image: url("../images/PaperBackground.png");
+            background-repeat: repeat;
+            font-family: "Source Sans 3", sans-serif;
+            color: #483C2B;
+        }
 
-}
-.footer-content h2 {
-    margin: 0 0 20px;
-    font-size: clamp(1.5rem, 3vw, 2.2rem);
-    color: #EBEBEB;
-}
-.footer-content h2:nth-of-type(2) { 
-    margin-top: 45px; 
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            background-color: #64605B;
+            display: flex;
+            align-items: center;
+            padding: 8px 15px;
+        }
 
-}
-.footer-content p {
-    margin: 10px;
-    color: #EBEBEB;
-    line-height: 1.5;
-}
-.footer-content > a { 
-    color: #EBEBEB; 
-    text-decoration: none; 
+        .logo {
+            display: block;
+        }
 
-}
-.footer-content > a:hover { 
-    text-decoration: underline; 
+            .logo img {
+                display: block;
+                width: auto;
+                height: clamp(40px, 5vw, 55px);
+            }
 
-}
-.social-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: clamp(20px, 4vw, 40px);
-    margin: 25px 0;
-}
-.social-links a { 
-    color: #EBEBEB; 
-    text-decoration: none; 
+        .nav-links {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: clamp(25px, 5vw, 60px);
+        }
 
-}
-.social-links a:hover { 
-    text-decoration: underline; 
+            .nav-links a {
+                color: #EBEBEB;
+                text-decoration: none;
+                font-family: "Stint Ultra Condensed", serif;
+                font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+                white-space: nowrap;
+                transition: opacity .2s ease;
+            }
 
-}
-.footer-logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    margin-top: 35px;
-}
-.kristiania-logo, .our-logo {
-    text-align: center; 
+                .nav-links a:hover {
+                    opacity: .7;
+                }
 
-}
-.kristiania-logo img { 
-    width: 80px; 
-    height: auto; 
+        h1, h2, h3 {
+            font-family: "Stint Ultra Condensed", serif;
+            font-weight: normal;
+        }
 
-}
-.our-logo img { 
-    width: 150px; 
-    height: auto; 
+        h1 {
+            margin: 0 0 clamp(20px, 3vw, 35px);
+            font-size: clamp(3rem, 5vw, 4.2rem);
+            line-height: 1;
+            text-align: center;
+            padding-top: 25px;
+        }
 
-}
-.copyright
-{ margin-top: 30px !important; 
-  font-size: .85rem; 
-  opacity: .8; 
+        .intro {
+            width: min(90%, 850px);
+            margin: 50px auto 0;
+        }
 
-}
+            .intro p, .post-content p {
+                margin: 0 0 20px;
+                font-size: clamp(1rem, 1.5vw, 1.3rem);
+                line-height: 1.55;
+            }
 
-@media (max-width: 600px) {
-    nav { overflow-x: auto; white-space: nowrap; }
-}
+        footer {
+            width: 100%;
+            margin-top: 100px;
+            padding: 50px 20px;
+            background-color: #64605B;
+            text-align: center;
+        }
 
-    .back-link {
-        display: inline-block;
-        margin-bottom: 25px;
-        color: #483C2B;
-        text-decoration: none;
-        font-size: 1rem;
-    }
-    .back-link:hover { 
-        text-decoration: underline; 
+        .footer-content {
+            width: min(90%, 700px);
+            margin: 0 auto;
+        }
 
-    }
+            .footer-content h2 {
+                margin: 0 0 20px;
+                font-size: clamp(1.5rem, 3vw, 2.2rem);
+                color: #EBEBEB;
+            }
 
-    .post-content {
-        width: min(90%, 1050px);
-        margin: 45px auto 0;
-    }
-    .post-content h1 {
-        text-align: left;
-        padding-top: 0;
-        margin-bottom: 12px;
-    }
-    .post-date {
-        margin: 0 0 30px;
-        font-size: .95rem;
-        opacity: .8;
-    }
-    .post-hero {
-        display: block;
-        width: 100%;
-        max-height: 520px;
-        object-fit: cover;
-        margin: 0 auto 35px;
-    }
-    .post-section {
+                .footer-content h2:nth-of-type(2) {
+                    margin-top: 45px;
+                }
+
+            .footer-content p {
+                margin: 10px;
+                color: #EBEBEB;
+                line-height: 1.5;
+            }
+
+            .footer-content > a {
+                color: #EBEBEB;
+                text-decoration: none;
+            }
+
+                .footer-content > a:hover {
+                    text-decoration: underline;
+                }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: clamp(20px, 4vw, 40px);
+            margin: 25px 0;
+        }
+
+            .social-links a {
+                color: #EBEBEB;
+                text-decoration: none;
+            }
+
+                .social-links a:hover {
+                    text-decoration: underline;
+                }
+
+        .footer-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 35px;
+        }
+
+        .kristiania-logo, .our-logo {
+            text-align: center;
+        }
+
+            .kristiania-logo img {
+                width: 80px;
+                height: auto;
+            }
+
+            .our-logo img {
+                width: 150px;
+                height: auto;
+            }
+
+        .copyright {
+            margin-top: 30px !important;
+            font-size: .85rem;
+            opacity: .8;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 25px;
+            color: #483C2B;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+            .back-link:hover {
+                text-decoration: underline;
+            }
+
+        .post-content {
+            width: min(90%, 1050px);
+            margin: 45px auto 0;
+        }
+
+            .post-content h1 {
+                text-align: left;
+                padding-top: 0;
+                margin-bottom: 12px;
+            }
+
+        .post-date {
+            margin: 0 0 30px;
+            font-size: .95rem;
+            opacity: .8;
+        }
+
+        .post-hero {
+            display: block;
+            width: 100%;
+            max-height: 520px;
+            object-fit: cover;
+            margin: 0 auto 35px;
+        }
+
+        .post-section {
             display: grid;
             grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
             align-items: center;
             column-gap: clamp(20px, 3vw, 40px);
             row-gap: 15px;
             margin: clamp(35px, 5vw, 60px) 0;
-    }
-    .post-section.reversed .post-section-image { order: 2; }
-    .post-section.reversed .post-section-text { order: 1; }
-    .post-section-text h2 {
-        margin: 0 0 18px;
-        font-size: clamp(1.8rem, 3vw, 2.5rem);
-        line-height: 1.05;
-    }
-    .post-section-text p {
-        margin: 0 0 20px;
-        font-size: clamp(1rem, 1.4vw, 1.2rem);
-        line-height: 1.55;
-    }
-    .post-section-image {
-        width: 100%;
-        min-width: 0;
-    }
-    .post-section-image img {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
+        }
+
+            .post-section.reversed .post-section-image {
+                order: 2;
+            }
+
+            .post-section.reversed .post-section-text {
+                order: 1;
+            }
+
+        .post-section-text h2 {
+            margin: 0 0 18px;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            line-height: 1.05;
+        }
+
+        .post-section-text p {
+            margin: 0 0 20px;
+            font-size: clamp(1rem, 1.4vw, 1.2rem);
+            line-height: 1.55;
+        }
+
+        .post-section-image {
+            width: 100%;
+            min-width: 0;
+        }
+
+            .post-section-image img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
 
         .post-section-continuation {
             grid-column: 1 / -1;
@@ -242,11 +288,12 @@ footer {
                 line-height: 1.55;
             }
 
-    .post-intro p {
-        font-size: clamp(1rem, 1.5vw, 1.3rem);
-        line-height: 1.55;
-        margin: 0 0 20px;
-    }
+        .post-intro p {
+            font-size: clamp(1rem, 1.5vw, 1.3rem);
+            line-height: 1.55;
+            margin: 0 0 20px;
+        }
+
         @media (max-width: 700px) {
             .post-content {
                 margin-top: 30px;
