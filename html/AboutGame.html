@@ -73,6 +73,20 @@
                 height: clamp(40px, 5vw, 55px);
             }
 
+        .instalogo {
+            display: block;
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+            .instalogo img {
+                display: block;
+                width: auto;
+                height: clamp(30px, 5vw, 45px);
+                margin-left: auto;
+                margin-right: 0;
+            }
+
         .nav-links {
             position: absolute;
             left: 50%;
@@ -100,6 +114,16 @@
                 overflow-x: auto;
                 white-space: nowrap;
             }
+
+            .nav-links {
+                font-size: clamp(0.9rem, 2vw, 1rem);
+                gap: clamp(15px, 4vw, 50px);
+            }
+
+                .nav-links a {
+                    font-size: clamp(0.9rem, 2vw, 1rem);
+                    gap: clamp(15px, 4vw, 50px);
+                }
         }
 
 
@@ -398,6 +422,10 @@
             <a href="DevBlog.html">DEVBLOG</a>
             <a href="Presskit.html">PRESSKIT</a>
         </div>
+
+        <a href="https://www.instagram.com/theroadahead_game" class="instalogo">
+            <img src="../images/instaicon.png" alt="Link to our Instagram Account">
+        </a>
     </nav>
 
 
