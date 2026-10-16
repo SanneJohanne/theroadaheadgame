@@ -227,6 +227,19 @@
             border: none;
         } */
 
+        .some {
+            width: min(90%,1000px);
+            margin: clamp(70px, 9vw, 120px) auto 0;
+       }
+
+            .some p {
+                margin-bottom: 1rem;
+                font-family: "Source Sans 3", sans-serif;
+                font-size: clamp(1rem, 1.5vw, 1.3rem);
+                line-height: 1.55;
+                color: #483C2B;
+            }
+
         .button {
             display: block;
             width: fit-content;
@@ -251,6 +264,48 @@
                 text-decoration: underline;
             }
 
+        .grid-button {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-bottom:-15px;
+           
+        }
+
+        .grid-button a{
+            
+            margin: 10px auto 0;
+            padding: 12px 3rem;
+            background-color: #64605B;
+            color: #EBEBEB;
+            font-family: "Source Sans 3", sans-serif;
+            font-size: 1.1rem;
+            margin-top: 10px;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: background-color 0.2s ease;
+        }
+
+        
+        .grid-button a{
+            color: #EBEBEB;
+            text-decoration: none;
+
+        }
+            .grid-button a:hover {
+                color: #EBEBEB;
+                text-decoration: underline;
+            }
+
+        @media (max-width: 900px) {
+            .grid-button {
+                grid-template-columns: 1fr;
+            }
+        }
+        
         /* Footer */
         footer {
             width: 100%;
@@ -436,6 +491,26 @@
     </iframe>
             </div>-->
 
+        </section>
+
+        <section class="some">
+            <h2>FOLLOW US ON SOCIAL MEDIA</h2>
+            <p>
+                Follow us on social media to get updates on our development!
+            </p>
+            <div class="grid-button">
+                <div class="grid-button">
+                    <a href="https://www.instagram.com/theroadahead_game">Instagram</a>
+                </div>
+
+                <div class="grid-button">
+                    <a href="https://www.youtube.com/@TheRoadAheadGame">YouTube</a>
+                </div>
+
+                <div class="grid-button">
+                    <a href="https://www.facebook.com/profile.php?id=61594785977585">Facebook</a>
+                </div>
+            </div>
         </section>
 
     </main>
