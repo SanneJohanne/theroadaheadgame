@@ -1,0 +1,388 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Presskit</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GZ9QG59412"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-GZ9QG59412');
+    </script>
+
+    <!-- Font import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Stint+Ultra+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <!-- Icon -->
+    <link rel="icon" type="png" href="images/TheRoadAheadIcon.png">
+
+    <style>
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        /* General page */
+
+        body {
+            margin: 0;
+            background-image: url("../images/PaperBackground.png");
+            background-repeat: repeat;
+            font-family: "Source Sans 3", sans-serif;
+            /*background-size: 800px auto;*/
+        }
+
+
+        /* Navigation */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            background-color: #64605B;
+            display: flex;
+            align-items: center;
+            padding: 8px 15px;
+        }
+
+        .logo {
+            display: block;
+        }
+
+            .logo img {
+                display: block;
+                width: auto;
+                height: clamp(40px, 5vw, 55px);
+            }
+
+        .nav-links {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: clamp(25px, 5vw, 60px);
+        }
+
+            .nav-links a {
+                color: #EBEBEB;
+                text-decoration: none;
+                font-family: "Stint Ultra Condensed", serif;
+                font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+                white-space: nowrap;
+                transition: opacity 0.2s ease;
+            }
+
+                .nav-links a:hover {
+                    opacity: 0.7;
+                }
+
+        @media (max-width: 600px) {
+            nav {
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        }
+
+
+        /* Main */
+
+        main {
+            width: 100%;
+        }
+
+        /* Headings */
+        h1 {
+            margin: 50px auto 0;
+            font-family: "Stint Ultra Condensed", serif;
+            color: #483C2B;
+            font-size: clamp(3rem, 5vw, 4.2rem);
+            font-weight: normal;
+            line-height: 1;
+            text-align: center;
+            padding-top: 10px;
+            
+        }
+
+        h2 {
+            margin: 0 0 clamp(20px, 3vw, 35px);
+            font-family: "Stint Ultra Condensed", serif;
+            color: #483C2B;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: normal;
+            line-height: 1;
+        }
+
+
+        .presskit {
+            width: min(90%,850px);
+            margin: 30px auto 0;
+        }
+
+
+        /* Introduction */
+        .presskit-intro {
+            width: 100%;
+            margin: 0;
+            text-align: left;
+        }
+
+            .presskit-intro p {
+                margin: 0;
+                font-family: "Source Sans 3", sans-serif;
+                font-size: clamp(1rem, 1.5vw, 1.3rem);
+                line-height: 1.55;
+                color: #483C2B;
+            }
+
+       
+        /* Trailer Section */
+
+        .presskit {
+            width: min(90%,850px);
+            margin: clamp(70px, 9vw, 120px) auto 0;
+            margin-top: 2rem;
+        }
+
+            .presskit a {
+                color: #483C2B;
+                text-decoration: none;
+                font-family: "Source Sans 3", sans-serif;
+                font-size: clamp(1rem, 1.5vw, 1.3rem);
+                transition: opacity 0.2s ease;
+            }
+
+                .presskit a:hover {
+                    text-decoration: underline;
+                    opacity: 0.7;
+                }
+
+            .presskit p {
+                margin: 0;
+                font-family: "Source Sans 3", sans-serif;
+                font-size: clamp(1rem, 1.5vw, 1.3rem);
+                line-height: 1.55;
+                color: #483C2B;
+                margin-top: 1rem;
+             
+            }
+
+        .button {
+            display: block;
+            width: fit-content;
+            margin: 20px auto 0;
+            padding: 12px 25px;
+            background-color: #64605B;
+            color: #EBEBEB;
+            font-family: "Source Sans 3", sans-serif;
+            font-size: 1.1rem;
+            margin-top:10px;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: background-color 0.2s ease;
+        }
+
+            .button a {
+                color: #EBEBEB;
+                text-decoration: none;
+            }
+
+                .button a:hover {
+                    color: #EBEBEB;
+                    text-decoration: underline;
+                }
+
+ 
+
+        /* Footer */
+        footer {
+            width: 100%;
+            margin-top: 100px;
+            padding: 50px 20px;
+            background-color: #64605B;
+            text-align: center;
+        }
+
+        .footer-content {
+            width: min(90%, 700px);
+            margin: 0 auto;
+        }
+
+            .footer-content h2 {
+                margin: 0 0 20px;
+                font-family: "Stint Ultra Condensed", serif;
+                font-size: clamp(1.5rem, 3vw, 2.2rem);
+                font-weight: normal;
+                color: #EBEBEB;
+            }
+
+                .footer-content h2:nth-of-type(2) {
+                    margin-top: 45px;
+                }
+
+            .footer-content p {
+                margin: 10px 10px;
+                font-family: "Source Sans 3", sans-serif;
+                color: #EBEBEB;
+                line-height: 1.5;
+            }
+
+            .footer-content > a {
+                color: #EBEBEB;
+                text-decoration: none;
+            }
+
+                .footer-content > a:hover {
+                    text-decoration: underline;
+                }
+
+        .footer-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 35px;
+        }
+
+        .kristiania-logo,
+        .our-logo {
+            text-align: center;
+        }
+
+            .kristiania-logo img {
+                width: 80px;
+                height: auto;
+            }
+
+            .our-logo img {
+                width: 150px;
+                height: auto;
+            }
+
+        /* Social links */
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: clamp(20px, 4vw, 40px);
+            margin: 25px 0;
+        }
+
+            .social-links a {
+                color: #EBEBEB;
+                text-decoration: none;
+                font-family: "Source Sans 3", sans-serif;
+            }
+
+                .social-links a:hover {
+                    text-decoration: underline;
+                }
+
+        .copyright {
+            margin-top: 30px !important;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+
+    <nav class="navbar">
+        <a href="../index.html" class="logo">
+            <img src="../images/TheRoadAhead_BlackLogo22.png" alt="Home">
+        </a>
+        <div class="nav-links">
+            <a href="AboutUs.html">ABOUT US</a>
+            <a href="AboutGame.html">ABOUT THE GAME</a>
+            <a href="DevBlog.html">DEVBLOG</a>
+            <a href="Presskit.html">PRESSKIT</a>
+        </div>
+    </nav>
+
+
+    <main>
+
+        <h1>PRESSKIT</h1>
+
+        <!-- Our Team -->
+        <section class="presskit">
+
+            <div class="presskit-intro">
+
+                <!-- <div class="button">
+
+        <a href="../downloads/Presskit.zip" download>DOWNLOAD Presskit</a>
+    </div>-->
+                <p>Our press kit is currently in development and will be available soon.</p>
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer>
+        <div class="footer-content">
+
+            <h2>CONTACT:</h2>
+            <a href="mailto:theroadaheadgame@gmail.com">
+                TheRoadAheadGame@gmail.com
+            </a>
+            <h2>FIND US ON:</h2>
+            <div class="social-links">
+                <a href="https://www.instagram.com/theroadahead_game">Instagram</a>
+                <a href="https://www.youtube.com/@TheRoadAheadGame">YouTube</a>
+                <a href="https://www.facebook.com/profile.php?id=61594785977585">Facebook</a>
+
+            </div>
+
+            <div class="footer-logos">
+
+                <div class="kristiania-logo">
+                    <img src="../images/Kristianialogo.png" alt="Kristiania University College">
+                </div>
+
+                <div class="our-logo">
+                    <img src="../images/TheRoadAhead_LogoWhite.png" alt="The Road Ahead Logo">
+                </div>
+
+            </div>
+
+
+
+
+            <div class="copyright">
+                <p>&copy; 2026 Sanne Johanne Hermansen</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
