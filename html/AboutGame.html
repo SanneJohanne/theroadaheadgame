@@ -130,6 +130,24 @@
             line-height: 1;
         }
 
+        h3 {
+            margin: 50px auto 0;
+            font-family: "Stint Ultra Condensed", serif;
+            color: #483C2B;
+            font-size: clamp(1rem, 2vw, 3rem);
+            font-weight: normal;
+            line-height: 1;
+        }
+
+        .overview-section {
+            width: min(90%, 850px);
+            margin: clamp(30px, 4vw, 50px) auto 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(40px, 6vw, 80px);
+            align-items: center;
+        }
+
         /* Team Section */
         .team {
             width: min(90%,850px);
@@ -152,29 +170,9 @@
                 color: #483C2B;
             }
 
+          
        
 
-        /*Phone*/
-        @media (max-width: 600px) {
-
-            .team-members {
-                grid-template-columns: 1fr 1fr;
-                width: 95%;
-                gap: 15px;
-            }
-
-            .team-member {
-                width: 100%;
-            }
-        }
-
-        /*Tablet*/
-        @media (max-width: 900px) {
-            .team-members {
-                width: 88%;
-                gap: 45px;
-            }
-        }
         /* Content Section */
 
         .content-section {
@@ -408,13 +406,20 @@
         <h1>ABOUT THE GAME</h1>
 
         <!-- Our Team -->
-        <section class="team">
+        <section class="overview-section">
 
             <div class="team-intro">
                 <h2>OVERVIEW</h2>
-                <p>
-                    *Content*
-                </p>
+                <h3>TITLE</h3>
+                    <p><i>The Road Ahead</i></p>
+                <h3>GENRE</h3>
+                    <p>Narrative, Exploration, Puzzle, Simulation</p>
+                <h3>PLATFORM</h3>
+                    <p>PC (Windows)</p>
+                <h3>LANGUAGE</h3>
+                    <p>English (US) 🇺🇲</p>
+                <h3>RELEASE</h3>
+                    <p>Summer 2027</p>
             </div>
 
         </section>
